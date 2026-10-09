@@ -1,13 +1,522 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" data-theme="dark">
 <head>
-    dadasldas
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="utf-8">
+<title>Tucanes de Yucatán · Clubes Pro FC 26/27</title>
+<meta name="description" content="Web oficial de Tucanes de Yucatán, club de Clubes Pro en EA SPORTS FC. Plantilla, historia, resultados, clips y cómo unirte al equipo.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" type="image/png" href="media/favicon.png">
+<link rel="apple-touch-icon" href="media/apple-touch-icon.png">
+<link rel="canonical" href="https://TUUSUARIO.github.io/tucanes-de-yucatan/">
+<meta name="theme-color" content="#ef3e42">
+<meta property="og:type" content="website"><meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Tucanes de Yucatán">
+<meta property="og:title" content="Tucanes de Yucatán · Clubes Pro FC 26/27">
+<meta property="og:description" content="Plantilla, historia, clips y cómo unirte a Tucanes de Yucatán. Rumbo a Élite.">
+<meta property="og:url" content="https://TUUSUARIO.github.io/tucanes-de-yucatan/"><meta property="og:image" content="https://TUUSUARIO.github.io/tucanes-de-yucatan/media/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://TUUSUARIO.github.io/tucanes-de-yucatan/media/og-image.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SportsTeam","name":"Tucanes de Yucatán","sport":"Fútbol (EA SPORTS FC · Clubes Pro)","url":"https://TUUSUARIO.github.io/tucanes-de-yucatan/","logo":"https://TUUSUARIO.github.io/tucanes-de-yucatan/media/crest.png","email":"tucanesdeyucatan@gmail.com","sameAs":["https://www.tiktok.com/@tucanes.de.yucatan"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050506;--bg2:#0d0d10;--card:#131317;--line:#2a2a31;--tx:#f5f2ee;--mut:#9a9aa6;--ac:#ef3e42;--onac:#fff;--hi:#fff;--win:#3ddc97;--lose:#ff5d73;--draw:#9a9aa8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme=light]{--bg:#f7f4f1;--bg2:#ece7e2;--card:#fff;--line:#d9d2cb;--tx:#0b0b0e;--mut:#5b5b66;--ac:#c8102e;--hi:#111;--win:#0f9d63;--lose:#d6264a;--draw:#6f6f7c}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+*,*:before,*:after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 17px/1.55 Barlow,system-ui,sans-serif;transition:background .35s,color .35s;overflow-x:hidden}
+h1,h2,h3{font-family:'Big Shoulders Display',Impact,sans-serif;margin:0;line-height:.95;letter-spacing:.01em}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+img,video{max-width:100%}
+:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
+section{padding:96px 6vw;max-width:1280px;margin:auto}
+h2{font-size:clamp(44px,7vw,92px);font-weight:900;margin-bottom:10px}
+.sub{color:var(--mut);max-width:58ch;margin:0 0 40px}
+/* LUZ DEL CURSOR */
+#spot{position:fixed;inset:0;z-index:150;pointer-events:none;opacity:0;transition:opacity .3s;mix-blend-mode:screen;background:radial-gradient(circle 170px at var(--mx,50%) var(--my,50%),rgba(239,62,66,.26),transparent 70%)}
+#spot:after{content:"";position:absolute;inset:0;background:radial-gradient(rgba(255,160,160,.95) 1.3px,transparent 1.8px) 0 0/22px 22px;-webkit-mask:radial-gradient(circle 140px at var(--mx,50%) var(--my,50%),#000,transparent);mask:radial-gradient(circle 140px at var(--mx,50%) var(--my,50%),#000,transparent)}
+:root[data-theme=light] #spot{mix-blend-mode:multiply;background:radial-gradient(circle 170px at var(--mx,50%) var(--my,50%),rgba(200,16,46,.2),transparent 70%)}
+:root[data-theme=light] #spot:after{background:radial-gradient(rgba(150,8,28,.85) 1.3px,transparent 1.8px) 0 0/22px 22px}
+#spot.on{opacity:1}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;gap:8px;padding:10px 4vw;padding-top:calc(10px + env(safe-area-inset-top,0px));background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.logo{font:900 24px 'Big Shoulders Display';display:flex;gap:10px;align-items:center;text-decoration:none;margin-right:auto;white-space:nowrap}
+.crest{width:40px;height:40px;border-radius:50%;background:#000;object-fit:contain;padding:3px;flex:none;border:1px solid var(--line)}
+.links{display:flex;gap:2px}
+.links a{padding:8px 11px;text-decoration:none;font-weight:600;border-radius:99px;font-size:15px;transition:.2s}
+.links a:hover,.links a.on{background:var(--ac);color:var(--onac)}
+.ib{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--card);display:grid;place-items:center;font-size:18px;text-decoration:none;flex:none}
+.ib svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ib:hover{border-color:var(--ac)}
+#burger{display:none}
+@media(max-width:1130px){#burger{display:grid}.links{position:fixed;inset:calc(62px + env(safe-area-inset-top,0px)) 0 auto 0;flex-direction:column;background:var(--bg);padding:12px 4vw 24px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:.3s;z-index:-1}.links.open{transform:none}.links a{font-size:20px;padding:12px}}
+@media(max-width:480px){nav{gap:6px;padding-left:3vw;padding-right:3vw}.logo{font-size:15px;gap:6px;min-width:0}.crest{width:32px;height:32px}.ib{width:38px;height:38px}}
+/* HERO */
+.hero{min-height:100svh;display:block;padding:110px 6vw 60px;position:relative;max-width:none;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(60vmax 40vmax at 82% 12%,color-mix(in srgb,var(--ac) 34%,transparent),transparent 60%),repeating-linear-gradient(90deg,transparent 0 11.1%,color-mix(in srgb,var(--line) 50%,transparent) 11.1% 11.2%);pointer-events:none}
+.hero>*{position:relative;max-width:1280px;width:100%;margin-inline:auto}
+.tag{display:inline-flex;gap:10px;align-items:center;border:1px solid var(--line);border-radius:99px;padding:6px 14px;background:var(--card);font-size:14px;color:var(--mut);width:max-content;max-width:100%}
+.tag b{color:var(--ac)}
+.hero h1{font-size:clamp(52px,15.5vw,250px);font-weight:900;margin:20px auto 10px;text-transform:uppercase;line-height:.82;}
+.hero h1 span{display:block;font-size:.62em;-webkit-text-stroke:2px var(--tx);color:transparent}
+@keyframes rise{from{transform:translateY(40px);opacity:0;letter-spacing:.2em}}
+.hg{display:block;margin-top:26px}
+@media(max-width:900px){.hg{grid-template-columns:1fr}}
+.hg p{font-size:20px;margin:0 0 6px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+.btn{padding:13px 24px;border-radius:99px;border:1px solid var(--tx);background:none;font-weight:600;text-decoration:none;transition:.2s;display:inline-block}
+.btn.p{background:var(--ac);border-color:var(--ac);color:var(--onac)}
+.btn:hover{transform:translateY(-3px)}
+.feat{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/9;background:#000;cursor:pointer;padding:0;display:block;width:100%}
+.feat video{width:100%;height:100%;object-fit:cover;display:block}
+.feat span{position:absolute;left:14px;bottom:12px;background:#000b;color:#fff;padding:6px 12px;border-radius:99px;font-size:14px;font-weight:600}
+.feat i{position:absolute;right:14px;bottom:12px;width:44px;height:44px;border-radius:50%;background:var(--ac);color:var(--onac);display:grid;place-items:center;font-style:normal}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:30px}
+.kpis div{background:var(--bg2);padding:18px}
+.kpis b{display:block;font:900 clamp(36px,5vw,64px) 'Big Shoulders Display'}
+.kpis span{color:var(--mut);font-size:14px}
+@media(max-width:600px){.kpis{grid-template-columns:1fr 1fr}.hero{padding-top:92px}}
+/* JUGADORES */
+.pw{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:start}
+@media(max-width:900px){.pw{grid-template-columns:1fr}.pcard{position:static!important}}
+.pitch{background:linear-gradient(#10341f,#08200f);border:1px solid var(--line);border-radius:18px;aspect-ratio:3/4;position:relative;overflow:hidden;max-height:680px;width:100%;margin-inline:auto}
+:root[data-theme=light] .pitch{background:linear-gradient(#2c8a5f,#1e6b47)}
+.pitch svg{position:absolute;inset:0;width:100%;height:100%}
+.dot{position:absolute;transform:translate(-50%,-50%);width:clamp(48px,9vw,62px);aspect-ratio:1;border-radius:50%;border:2px solid #fff;background:#000;padding:0;overflow:visible;transition:.2s}
+.dot img.ph{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:50% 18%;display:block}
+.dot em{position:absolute;right:-6px;top:-6px;min-width:24px;height:24px;border-radius:12px;background:var(--ac);color:#fff;font:800 14px/24px 'Big Shoulders Display';text-align:center;font-style:normal;padding:0 4px}
+.dot:hover,.dot.on{transform:translate(-50%,-50%) scale(1.2);z-index:3;border-color:var(--ac)}
+.dot small{position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:4px;font:600 12px Barlow;color:#fff;white-space:nowrap;text-shadow:0 1px 3px #000}
+.dot.free{border-style:dashed;border-color:#ffffffaa;background:#0006;display:grid;place-items:center}
+.dot.free img{width:58%;opacity:.55;filter:grayscale(.4)}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;position:sticky;top:90px}
+.pph{width:100%;aspect-ratio:16/10;border-radius:12px;overflow:hidden;position:relative;margin-bottom:14px;background:#000;display:block;border:0;padding:0}
+.pph img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.pph.free img{object-fit:contain;padding:14px;opacity:.7;object-position:center}
+.pph b{position:absolute;right:10px;bottom:10px;background:var(--ac);color:var(--onac);padding:6px 14px;border-radius:99px;font-size:14px}
+.pcard h3{font-size:clamp(38px,6vw,54px);font-weight:900}
+.pcard .pos{color:var(--ac);font-weight:600}
+.pcard .nk{color:var(--mut);margin:2px 0 0}
+.pcard p.n2{color:var(--mut);font-size:14px;margin:14px 0 0}
+.st{margin-top:14px;display:grid;gap:12px}
+.st div{display:grid;grid-template-columns:96px 1fr 36px;align-items:center;gap:10px;font-size:15px}
+.bar{height:10px;background:var(--bg2);border-radius:9px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--ac);border-radius:9px;transition:width .6s cubic-bezier(.2,.8,.2,1)}
+.st .g i{background:var(--hi)}
+.tabs{display:flex;gap:8px;margin:36px 0 14px;flex-wrap:wrap}
+.tabs button{padding:8px 18px;border-radius:99px;border:1px solid var(--line);background:var(--card)}
+.tabs button.on{background:var(--tx);color:var(--bg)}
+.note{color:var(--mut);font-size:15px;margin:0 0 14px}
+.rank{display:grid;gap:8px}
+.rank button{display:grid;grid-template-columns:30px 1fr minmax(60px,1fr) 44px;gap:12px;align-items:center;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.rank button:hover{border-color:var(--ac)}
+.rank b{font:800 22px 'Big Shoulders Display'}
+.rank em{font:900 28px 'Big Shoulders Display';font-style:normal;text-align:right}
+.rec{margin-top:36px;border:1px dashed var(--ac);border-radius:18px;padding:26px;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:color-mix(in srgb,var(--ac) 9%,var(--card))}
+.rec h3{font-size:36px}
+.rec p{margin:4px 0 0;color:var(--mut)}
+/* HISTORIA (una sola cara) */
+.tl{display:grid;grid-template-columns:repeat(7,1fr);margin-top:10px}
+.yr{background:none;border:0;text-align:center;padding:0;color:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
+.yr .rail{width:100%}
+.yr h3{font-size:clamp(14px,4.6vw,66px);font-weight:900;color:var(--mut);transition:.25s;margin-bottom:12px}
+.yr:hover h3,.yr:focus-visible h3{color:var(--tx)}
+.rail{position:relative;height:30px;margin-bottom:16px}
+.rail:before{content:"";position:absolute;left:0;right:0;top:50%;margin-top:-1.5px;height:3px;background:linear-gradient(90deg,var(--ac),var(--hi))}
+.yr:first-child .rail:before{left:50%}.yr:last-child .rail:before{right:50%}
+.rail i{position:absolute;left:50%;top:50%;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:var(--bg);border:4px solid var(--ac);transition:.25s}
+.yr:hover .rail i,.yr:focus-visible .rail i{background:var(--ac);transform:scale(1.5)}
+.yr strong{font:800 clamp(8.5px,1.7vw,24px) 'Big Shoulders Display';display:block;padding:0;line-height:1.05;overflow-wrap:break-word;hyphens:none}
+.yr p{color:var(--mut);margin:6px 4px 8px;font-size:14px}
+.yr u{color:var(--ac);font-size:14px;font-weight:600}
+@media(max-width:700px){.yr p,.yr u{display:none}}
+.hint{color:var(--mut);font-size:14px;text-align:center;margin-top:18px}
+#det{position:fixed;inset:0;z-index:100;background:var(--bg);overflow:auto;transform:translateX(100%);transition:transform .45s cubic-bezier(.2,.8,.2,1);visibility:hidden;padding-top:env(safe-area-inset-top,0px)}
+#det.open{transform:none;visibility:visible}
+.dh{padding:90px 6vw 40px;max-width:1100px;margin:auto}
+.dh h2{font-size:clamp(90px,22vw,260px);line-height:.8;-webkit-text-stroke:2px var(--ac);color:transparent}
+.dh h3{font-size:clamp(34px,5vw,60px);margin:10px 0 14px}
+.dh p{max-width:62ch;color:var(--mut);font-size:19px}
+.dn{position:sticky;top:0;display:flex;justify-content:space-between;gap:8px;padding:14px 4vw;background:var(--bg);border-bottom:1px solid var(--line);z-index:2}
+.gl{padding:20px 6vw 10px;max-width:1100px;margin:auto;font:800 30px 'Big Shoulders Display'}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;padding:0 6vw 30px;max-width:1100px;margin:auto}
+/* TILES (clips y fotos) */
+.tile{position:relative;overflow:hidden;border-radius:14px;border:1px solid var(--line);padding:0;background:#000;display:block;width:100%;aspect-ratio:9/14;text-align:left;transition:.25s}
+.tile img{width:100%;height:100%;object-fit:cover;display:block;transition:.4s}
+.tile:hover{transform:translateY(-4px);border-color:var(--ac)}
+.tile:hover img{transform:scale(1.06)}
+.tile .cap{position:absolute;left:0;right:0;bottom:0;padding:26px 10px 10px;background:linear-gradient(transparent,#000d);color:#fff;font-weight:600;font-size:14px;line-height:1.2}
+.tile .cap small{display:block;font-weight:400;opacity:.75;font-size:12px}
+.tile .pl{position:absolute;top:10px;right:10px;width:38px;height:38px;border-radius:50%;background:var(--ac);color:var(--onac);display:grid;place-items:center;font-size:14px}
+.tile.h{aspect-ratio:16/10}
+.tile.ph4{aspect-ratio:4/3}
+/* RESULTADOS */
+.res{display:grid;gap:8px}
+.m{display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.m .w{width:36px;height:36px;border-radius:9px;display:grid;place-items:center;font:900 20px 'Big Shoulders Display';color:#000}
+.W{background:var(--win)}.L{background:var(--lose)}.E{background:var(--draw)}
+.m.empty{border-style:dashed;opacity:.75}
+.m.empty .w{background:none;border:1px dashed var(--mut);color:var(--mut)}
+.m small{color:var(--mut);display:block}
+.m .sc{font:900 34px 'Big Shoulders Display'}
+.form{display:flex;gap:6px;margin:0 0 20px}
+.form i{width:14px;height:34px;border-radius:5px;border:1px dashed var(--mut)}
+.form i.W,.form i.L,.form i.E{border:0}
+/* MULTIMEDIA */
+.tk{display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap;border:1px solid var(--line);border-radius:18px;padding:24px;background:var(--card);margin-bottom:10px}
+.tk h3{font-size:clamp(30px,5vw,48px)}
+.tk p{margin:4px 0 0;color:var(--mut)}
+.mh{font:800 32px 'Big Shoulders Display';margin:38px 0 12px}
+.g3{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}
+.gv{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.gp{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+/* SPONSORS Y REDES */
+.sp{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.sp a{border:1px solid var(--line);border-radius:14px;padding:34px 12px;text-align:center;font:900 32px 'Big Shoulders Display';background:var(--card);transition:.2s;text-decoration:none;display:block}
+.sp a:hover{border-color:var(--ac);color:var(--ac);transform:translateY(-4px)}
+.sp a.o{border-style:dashed;color:var(--mut);font-size:24px}
+.sp small{display:block;font:500 13px Barlow;color:var(--mut)}
+.legal{color:var(--mut);font-size:13px;margin-top:14px}
+.so{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.so a{display:flex;justify-content:space-between;align-items:center;padding:22px;border-radius:14px;background:var(--card);border:1px solid var(--line);text-decoration:none;font:800 30px 'Big Shoulders Display';transition:.2s}
+.so a:hover{background:var(--ac);color:var(--onac);transform:translateY(-4px)}
+.so a.o{border-style:dashed;color:var(--mut);pointer-events:none}
+.so small{font:500 14px Barlow;opacity:.75}
+/* CONTACTO */
+.cw{display:grid;grid-template-columns:1fr 1.1fr;gap:30px;align-items:start}
+@media(max-width:900px){.cw{grid-template-columns:1fr}}
+.cw .mail{display:inline-flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:6px}
+.cw .mail a{font-weight:600;color:var(--ac)}
+.fm{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;gap:14px}
+.fm label{display:grid;gap:6px;font-weight:600;font-size:15px}
+.fm input,.fm select,.fm textarea{font:inherit;color:var(--tx);background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:12px 14px;width:100%}
+.fm input:focus,.fm select:focus,.fm textarea:focus{outline:2px solid var(--ac);border-color:var(--ac)}
+.fm small{color:var(--mut)}
+footer{text-align:center;color:var(--mut);padding:50px 6vw 90px;border-top:1px solid var(--line);font-size:14px}
+footer a{color:var(--tx)}
+/* VISOR */
+#vm{position:fixed;inset:0;z-index:180;background:#000e;display:none;place-items:center;padding:4vmin}
+#vm.open{display:grid}
+#vm .box{position:relative;max-width:min(94vw,1100px);max-height:90svh;display:grid;gap:10px;justify-items:center}
+#vm video,#vm img{max-width:94vw;max-height:80svh;border-radius:12px;background:#000;display:none}
+#vm .ttl{color:#fff;font:800 26px 'Big Shoulders Display';text-align:center}
+#vx{position:absolute;top:-6px;right:-6px;transform:translate(0,-100%);width:44px;height:44px;border-radius:50%;border:1px solid #fff6;background:var(--ac);color:#fff;font-size:20px}
+@media(max-width:700px){#vx{top:0;right:0;transform:none;z-index:2}}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,120px);background:var(--tx);color:var(--bg);padding:12px 20px;border-radius:99px;z-index:200;transition:.35s;max-width:88vw;text-align:center}
+#toast.s{transform:translate(-50%,0)}
 
+/* ANIMACIONES Y EXTRAS */
+#sb{position:fixed;top:0;left:0;right:0;height:3px;background:var(--ac);transform-origin:0 50%;transform:scaleX(var(--sp,0));z-index:60;pointer-events:none}
+.hero>.orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:.42;pointer-events:none;background:var(--ac);animation:fl 14s ease-in-out infinite alternate;margin:0;max-width:none;width:34vmax;height:34vmax;left:-10vmax;top:30%}
+.hero>.orb.o2{width:26vmax;height:26vmax;left:auto;right:-8vmax;top:-6vmax;animation-delay:-6s;background:#ff8a8a}
+:root[data-theme=light] .orb{opacity:.2}
+@keyframes fl{to{transform:translate(8vmax,-6vmax) scale(1.2)}}
+.hero h1 .w{display:inline-block;white-space:nowrap}
+.lt{display:inline-block;font-weight:inherit;animation:lt .9s cubic-bezier(.2,.9,.2,1) backwards;animation-delay:calc(var(--n)*55ms + 150ms)}
+@keyframes lt{from{opacity:0;transform:translateY(60%) rotate(8deg)}}
+.btn.p{position:relative;overflow:hidden}
+.btn.p:after{content:"";position:absolute;top:0;left:-70%;width:40%;height:100%;background:linear-gradient(100deg,transparent,#fff7,transparent);transform:skewX(-20deg);animation:shine 3.6s infinite}
+@keyframes shine{0%,60%{left:-70%}100%{left:140%}}
+.mq{overflow:hidden;background:var(--ac);color:var(--onac);padding:12px 0;transform:rotate(-1.2deg);margin:8px -3vw 0;font:900 28px 'Big Shoulders Display';white-space:nowrap;position:relative;z-index:2}
+.mt{display:inline-block;animation:mq 30s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+.rv{opacity:0;translate:0 34px;transition:opacity .8s cubic-bezier(.2,.8,.2,1),translate .8s cubic-bezier(.2,.8,.2,1),transform .25s,border-color .25s,background .25s,color .25s}
+.rv.in{opacity:1;translate:none}
+.tile,.sp a,.so a{transform:perspective(700px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(var(--ty,0px))}
+.tile:hover,.sp a:hover,.so a:hover{transform:perspective(700px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(-4px)}
+.pitch:not(.in) .dot{opacity:0}
+.pitch.in .dot{animation:pop .6s cubic-bezier(.2,1.4,.4,1) backwards;animation-delay:calc(var(--i)*90ms + 150ms)}
+@keyframes pop{from{opacity:0;transform:translate(-50%,-50%) scale(.2)}}
+.dot .ic,.pic{display:grid;place-items:center;border-radius:50%;background:radial-gradient(circle at 30% 25%,#3a1013,#000);color:var(--ac)}
+.dot .ic{width:100%;height:100%}
+.dot .ic svg,.pic svg{width:56%;height:56%;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.pic{width:110px;height:110px;margin:0 0 14px;border:2px solid var(--ac);box-shadow:0 0 30px color-mix(in srgb,var(--ac) 40%,transparent);animation:bob 4s ease-in-out infinite}
+.pic.free img{width:60%;opacity:.75}
+@keyframes bob{50%{transform:translateY(-6px)}}
+.dot.free:after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--ac);opacity:0;animation:ring 2.4s ease-out infinite}
+@keyframes ring{0%{transform:scale(.85);opacity:.8}100%{transform:scale(1.45);opacity:0}}
+.fb{position:absolute;left:10px;top:10px;z-index:2;background:#000a;color:#fff;border:1px solid #fff4;border-radius:99px;padding:4px 12px;font:600 13px Barlow}
+.bt{font:800 26px 'Big Shoulders Display';margin:20px 0 10px}.bt small{font:400 14px Barlow;color:var(--mut)}
+.bench{display:flex;flex-wrap:wrap;gap:12px}
+.bn{width:64px;display:grid;justify-items:center;gap:4px;background:none;border:0;padding:0}
+.bn img{width:52px;height:52px;border-radius:50%;border:2px dashed var(--mut);background:var(--card);padding:10px;object-fit:contain;opacity:.85;transition:.2s}
+.bn small{font-size:12px;color:var(--mut);font-weight:600}
+.bn:hover img,.bn.on img{border-color:var(--ac);transform:scale(1.1)}
+.tl .rail:before{transform:scaleX(0);transform-origin:left;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.tl.in .rail:before{transform:none;transition-delay:calc(var(--k)*.3s)}
+.tl:not(.in) .rail i{transform:scale(0)}
+.tl.in .rail i{transition-delay:calc(var(--k)*.3s + .35s)}
+.tl.done .rail i,.tl.done .rail:before{transition-delay:0s}
+.yr:hover .rail i,.yr:focus-visible .rail i{transform:scale(1.5)}
+
+.dot .ph{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:50% 16%;display:block}
+.dot .bi{position:absolute;left:-7px;bottom:-3px;width:26px;height:26px;border-radius:50%;background:#000;border:1.5px solid var(--ac);color:var(--ac);display:grid;place-items:center}
+.dot .bi svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.pf{position:relative;width:100%;aspect-ratio:4/3;border-radius:14px;overflow:hidden;margin-bottom:14px;background:#000}
+.pf img{width:100%;height:100%;object-fit:cover;object-position:50% 14%;display:block}
+.pf .pic{position:absolute;right:12px;bottom:12px;width:58px;height:58px;margin:0;animation:none;background:#000c}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
-    
+<div id="spot" aria-hidden="true"></div>
+<div id="sb" aria-hidden="true"></div>
+<nav>
+  <a class="ib" href="#top" aria-label="Ir al inicio"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-6h4v6"/></svg></a>
+  <a class="logo" href="#top"><img class="crest" src="media/crest.png" alt="Escudo de Tucanes de Yucatán">TUCANES DE YUCATÁN</a>
+  <div class="links" id="links">
+    <a href="#jugadores">Jugadores</a><a href="#historia">Historia</a><a href="#resultados">Resultados</a><a href="#multimedia">Multimedia</a><a href="#sponsors">Sponsors</a><a href="#redes">Redes</a><a href="#contacto">Contacto</a>
+  </div>
+  <button class="ib" id="theme" aria-label="Cambiar entre modo oscuro y claro">☾</button>
+  <button class="ib" id="burger" aria-label="Abrir menú">≡</button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="orb o1"></div><div class="orb o2"></div>
+  <div class="tag"><b>● NUEVA TEMPORADA</b> Clubes Pro · FC 26/27</div>
+  <h1>Tucanes<span>de Yucatán</span></h1>
+  <div class="hg">
+    <div>
+      <p>Desde Yucatán a Clubes Pro. Estamos en la división 5 y vamos a por Élite.</p>
+      <div class="cta"><button class="btn p" data-k="trailer">▶ Ver el tráiler</button><a class="btn" href="#jugadores">Conoce la plantilla</a><a class="btn" href="#contacto">Quiero jugar</a></div>
+    </div>
+      </div>
+  <div class="kpis" id="kpis"></div>
+</header>
+<div class="mq" aria-hidden="true"><div class="mt"><span>TUCANES DE YUCATÁN ✦ RUMBO A ÉLITE ✦ CLUBES PRO FC 26/27 ✦ TUCANES DE YUCATÁN ✦ RUMBO A ÉLITE ✦ CLUBES PRO FC 26/27 ✦ TUCANES DE YUCATÁN ✦ RUMBO A ÉLITE ✦ CLUBES PRO FC 26/27 ✦ TUCANES DE YUCATÁN ✦ RUMBO A ÉLITE ✦ CLUBES PRO FC 26/27 ✦ </span><span>TUCANES DE YUCATÁN ✦ RUMBO A ÉLITE ✦ CLUBES PRO FC 26/27 ✦ TUCANES DE YUCATÁN ✦ RUMBO A ÉLITE ✦ CLUBES PRO FC 26/27 ✦ TUCANES DE YUCATÁN ✦ RUMBO A ÉLITE ✦ CLUBES PRO FC 26/27 ✦ TUCANES DE YUCATÁN ✦ RUMBO A ÉLITE ✦ CLUBES PRO FC 26/27 ✦ </span></div></div>
+
+<section id="jugadores">
+  <h2>Jugadores</h2>
+  <p class="sub">Formación 4-3-3 ofensiva. Toca a un jugador para ver su ficha y su presentación. Los puestos en discontinua y el banquillo están libres: ¡apúntate!</p>
+  <div class="pw">
+    <div><div class="pitch" id="pitch"><span class="fb">4-3-3 ofensiva</span>
+      <svg viewBox="0 0 300 400" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2"><rect x="10" y="10" width="280" height="380"/><line x1="10" y1="200" x2="290" y2="200"/><circle cx="150" cy="200" r="38"/><rect x="85" y="10" width="130" height="55"/><rect x="85" y="335" width="130" height="55"/></svg>
+    </div>
+    <div class="bt">Banquillo <small>· plazas libres para suplentes</small></div><div class="bench" id="bench"></div></div>
+    <div class="pcard" id="pcard" aria-live="polite"></div>
+  </div>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <p class="note" id="rnote"></p>
+  <div class="rank" id="rank"></div>
+  <div class="rec"><div><h3>¿Quieres jugar con nosotros?</h3><p>Tenemos puestos libres en defensa y portería, y un banquillo con plazas para suplentes.</p></div><div class="cta" style="margin:0"><a class="btn p" href="#contacto">Escríbenos</a></div></div>
+</section>
+
+<section id="historia">
+  <h2>Historia</h2>
+  <p class="sub">Del 2021 al 2027, cada año es una página. Pulsa uno para entrar. Hoy estamos en la división 5 y la meta es Élite.</p>
+  <div class="tl" id="tl"></div>
+  <p class="hint">Toca un año para ver su página</p>
+</section>
+
+<section id="resultados">
+  <h2>Resultados</h2>
+  <p class="sub">La temporada acaba de empezar. Aquí aparecerá cada partido en cuanto se juegue.</p>
+  <div class="form" id="form" aria-label="Racha"></div>
+  <div class="tabs" id="rtabs" hidden></div>
+  <div class="res" id="res"></div>
+</section>
+
+<section id="multimedia">
+  <h2>Multimedia</h2>
+  <p class="sub">Goles, presentaciones y momentos del vestuario. Toca cualquiera para verlo.</p>
+  <div class="tk"><div><h3>@tucanes.de.yucatan</h3><p>Más clips cada semana en TikTok.</p></div><a class="btn p" href="https://www.tiktok.com/@tucanes.de.yucatan" target="_blank" rel="noopener">Ver el TikTok</a></div>
+  <div class="mh">Mejores jugadas</div><div class="g3" id="mg"></div>
+  <div class="mh">Presentaciones de la plantilla</div><div class="gv" id="mp"></div>
+  <div class="mh">Más clips</div><div class="gv" id="mm"></div>
+  </section>
+
+<section id="sponsors">
+  <h2>Sponsors</h2>
+  <p class="sub">Marcas que acompañan a los Tucanes esta temporada. Toca una para ir a su web.</p>
+  <div class="sp" id="sp"></div>
+  <p class="legal">+18. Juega con responsabilidad.</p>
+</section>
+
+<section id="redes">
+  <h2>Redes sociales</h2>
+  <p class="sub">Estamos empezando y queremos crecer contigo. Síguenos para no perderte nada.</p>
+  <div class="so" id="so"></div>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <div class="cw">
+    <div>
+      <p class="sub" style="margin-bottom:18px">¿Quieres jugar con los Tucanes o hablar de un patrocinio? Cuéntanos quién eres y te respondemos por correo.</p>
+      <div class="mail"><a href="mailto:tucanesdeyucatan@gmail.com">tucanesdeyucatan@gmail.com</a><button class="btn" id="cp" type="button">Copiar</button></div>
+      <p class="sub" style="margin-top:22px">También puedes escribirnos por TikTok o Discord.</p>
+    </div>
+    <form class="fm" id="fm">
+      <label>Tu nombre<input name="n" required autocomplete="name"></label>
+      <label>Tu ID de EA o gamertag<input name="g" required></label>
+      <label>Mensaje<textarea name="m" id="fmsg" rows="4" placeholder="Cuéntanos tu experiencia, tus horarios y el puesto que te interesa."></textarea></label>
+      <button class="btn p" type="submit">Enviar por correo</button>
+      <small>Se abrirá tu aplicación de correo con el mensaje listo para enviar.</small>
+    </form>
+  </div>
+</section>
+
+<footer><img class="crest" src="media/crest.png" alt="" style="margin-bottom:12px"><br>Tucanes de Yucatán · Clubes Pro · <a href="mailto:tucanesdeyucatan@gmail.com">tucanesdeyucatan@gmail.com</a><br>Web no oficial, sin afiliación con EA SPORTS. Los patrocinadores y marcas pertenecen a sus propietarios.</footer>
+
+<div id="det" aria-hidden="true"><div class="dn"><button class="btn" id="back">← Historia</button><span><button class="btn" id="prev" aria-label="Año anterior">‹</button> <button class="btn" id="next" aria-label="Año siguiente">›</button></span></div><div id="dc"></div></div>
+<div id="vm" role="dialog" aria-modal="true" aria-label="Visor"><div class="box"><button id="vx" aria-label="Cerrar">✕</button><video id="vv" controls playsinline></video><img id="vi" alt=""><div class="ttl" id="vt"></div></div></div>
+<div id="toast" role="status"></div>
+
+<script>
+/* ============ DATOS: EDITA AQUÍ ============ */
+const TIKTOK="https://www.tiktok.com/@tucanes.de.yucatan";
+const DISCORD="#"; // pega aquí tu enlace de invitación de Discord, entre comillas
+const MAIL="tucanesdeyucatan@gmail.com";
+const CREST="media/crest.png";
+// Clips: clave -> título, subtítulo, vídeo, portada
+const C={
+victor:["Víctor Qui Víctor","Presentación · ED","media/victor.mp4","media/posters/victor.jpg"],
+abalos:["Sr. Ábalos","Presentación · DC","media/abalos.mp4","media/posters/abalos.jpg"],
+segesemo:["Segesemo Kulungele","Presentación · MCD","media/segesemo.mp4","media/posters/segesemo.jpg"],
+joaking:["Joaking","Presentación · MCD","media/joaking.mp4","media/posters/joaking.jpg"],
+sanzinho:["Sanzinho","Presentación · MCO","media/sanzinho.mp4","media/posters/sanzinho.jpg"],
+sangare:["Sangaré","Presentación · DC","media/sangare.mp4","media/posters/sangare.jpg"],
+trailer:["Tráiler 26/27","25 de septiembre de 2026","media/trailer.mp4","media/posters/trailer.jpg"],
+gol1:["Gol y celebración","FC 27 · Clubes Pro","media/gol1.mp4","media/posters/gol1.jpg"],
+gol2:["Golazo","FC 27 · Clubes Pro","media/gol2.mp4","media/posters/gol2.jpg"],
+nacho:["Clip de Nacho","Vestuario y gol","media/nacho.mp4","media/posters/nacho.jpg"],
+fiesta1:["Baile en el vestuario","Celebración","media/fiesta1.mp4","media/posters/fiesta1.jpg"],
+fiesta2:["Ábalos, el 69","Celebración","media/fiesta2.mp4","media/posters/fiesta2.jpg"],
+fiesta3:["Noche de Orlando","Humor","media/fiesta3.mp4","media/posters/fiesta3.jpg"],
+fiesta4:["Pelea de baile","Humor","media/fiesta4.mp4","media/posters/fiesta4.jpg"]};
+const PH={abalos:"media/players/abalos.jpg",sangare:"media/players/sangare.jpg",victor:"media/players/victor.jpg",sanzinho:"media/players/sanzinho.jpg",segesemo:"media/players/segesemo.jpg",joaking:"media/players/joaking.jpg"};
+// Jugadores: nombre, pos, dorsal, goles, asist., MVPs, X%, Y%, clip, apodo, nombre corto   (null = aún sin datos)
+const P=[
+["Sr. Ábalos","DC",69,null,null,null,50,14,"abalos","El romántico de Yucatán","Ábalos","heart"],
+["Sangaré","EI",5,null,null,null,18,18,"sangare","El milagro de Yucatán","Sangaré","star"],
+["Víctor Qui Víctor","ED",7,null,null,null,82,18,"victor","Las alas de Yucatán","Víctor","wings"],
+["Sanzinho","MCO",10,null,null,null,50,38,"sanzinho","El cerebro de Yucatán","Sanzinho","brain"],
+["Segesemo Kulungele","MCD",87,null,null,null,29,54,"segesemo","El guardián de Yucatán","Segesemo","shield"],
+["Joaking","MCD",6,null,null,null,71,54,"joaking","El 9 disfrazado de MCD","Joaking","mask"]];
+const FREE=[["LI","Lateral izquierdo",12,73],["DFC","Defensa central",37,77],["DFC","Defensa central",63,77],["LD","Lateral derecho",88,73],["POR","Portero",50,90]];
+const BENCH=[["POR","Portero suplente"],["DFC","Defensa central suplente"],["LI","Lateral izquierdo suplente"],["LD","Lateral derecho suplente"],["MC","Centrocampista suplente"],["EI","Extremo izquierdo suplente"],["DC","Delantero suplente"]];
+// Historia (2021-2027)
+const Y=[
+{y:2021,t:"Fimoseros FC",s:"Unos chavales, la play y muchas ganas.",tx:"Este club nació por la inspiración de unos chavales a los que les encantaba jugar a la play. Se llamaba Fimoseros FC y, desde el primer día, ya olía a historia.",st:["Nace el club","Fimoseros FC","Temporada 2021-22"],k:[]},
+{y:2022,t:"Galácticos FC",s:"Cambio de nombre y de ambición.",tx:"En la temporada 2022-23 el club se rebautiza como Galácticos FC. Se afianza el grupo, llegan caras nuevas y se acumulan los momentos buenos... y también los fails que hoy se recuerdan entre risas.",st:["Galácticos FC","Temporada 2022-23","Buenos momentos y fails"],k:[]},
+{y:2023,t:"San Solterín",s:"Nueva etapa y primera web del club.",tx:"En 2023 el club pasa a llamarse San Solterín y nace su primera página web, el lugar donde empieza a guardarse toda la trayectoria. Nueva etapa, mismo grupo de amigos.",st:["San Solterín","Primera web del club","Nueva etapa"],k:[]},
+{y:2024,t:"Subiendo peldaños",s:"Más serios, sin perder las bromas.",tx:"El equipo aprende a competir: sistemas, roles y mucha práctica. El grupo se vuelve más serio dentro del campo sin perder el humor fuera de él.",st:["Más disciplina","Mismos amigos","La meta: Élite"],k:[]},
+{y:2025,t:"Sangre nueva",s:"Más carácter y ganas de reinventarse.",tx:"Llegan jugadores con hambre y el equipo gana carácter. Empieza a tomar forma la idea de reinventar el club con una identidad propia y con Yucatán por bandera.",st:["Sangre nueva","Más carácter","Idea de reinventarse"],k:[]},
+{y:2026,t:"Nacen los Tucanes",s:"Nuevo nombre, tráiler y presentación.",tx:"El 25 de septiembre de 2026 el club se presenta como Tucanes de Yucatán, con tráiler y una presentación para cada jugador. Nuevo nombre, nueva imagen y el mismo espíritu de siempre.",st:["Tráiler: 25 sept. 2026","6 jugadores","Nuevo nombre"],k:["trailer","abalos","sangare","victor","sanzinho","segesemo","joaking"]},
+{y:2027,t:"Actualidad",s:"Temporada 26/27: división 5, rumbo a Élite.",tx:"Hoy los Tucanes juegan la temporada 26/27 de Clubes Pro. Empezamos en la división 5, con una 4-3-3 ofensiva y un objetivo claro: llegar a Élite. Cada partido, gol y celebración quedará guardado aquí.",st:["División actual: 5","4-3-3 ofensiva","Objetivo: Élite"],k:["gol1","gol2"],cur:1}];
+const R=[]; // Resultados: ["W"|"E"|"L", rival, competición, tus goles, goles rival, MVP]. Ej: ["W","Vortex FC","Liga",4,1,"Sanzinho"]
+const SP=[["EAFEV.COM","https://eafev.com"],["bet365","https://www.bet365.com"],["Nike","https://www.nike.com"],["Adidas","https://www.adidas.com"],["winamax.com","https://www.winamax.com"],["bwin.com","https://www.bwin.com"]];
+const SO=[["TikTok","@tucanes.de.yucatan",TIKTOK],["Discord","Comunidad",DISCORD],["Correo",MAIL,"mailto:"+MAIL]];
+
+/* ============ UTIL ============ */
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('s');clearTimeout(toast.i);toast.i=setTimeout(()=>t.classList.remove('s'),2600)};
+const vtile=(k,cls)=>`<button class="tile ${cls||''}" data-k="${k}" aria-label="Ver ${C[k][0]}"><img src="${C[k][3]}" alt="" loading="lazy"><i class="pl">▶</i><span class="cap">${C[k][0]}<small>${C[k][1]}</small></span></button>`;
+/* visor */
+const vm=$('#vm'),vv=$('#vv'),vi=$('#vi');
+function openV(k){vi.style.display='none';vv.style.display='block';vv.src=C[k][2];vv.poster=C[k][3];$('#vt').textContent=C[k][0];vm.classList.add('open');vv.play().catch(()=>{});$('#vx').focus()}
+function closeV(){vv.pause();vv.removeAttribute('src');vv.load();vi.removeAttribute('src');vm.classList.remove('open')}
+$('#vx').onclick=closeV;vm.onclick=e=>{if(e.target==vm)closeV()};
+addEventListener('keydown',e=>{if(e.key=='Escape'&&vm.classList.contains('open'))closeV()});
+document.addEventListener('click',e=>{const k=e.target.closest('[data-k]');if(k&&C[k.dataset.k]){openV(k.dataset.k);return}const a=e.target.closest('a[href="#"]');if(a){e.preventDefault();toast('Enlace disponible muy pronto.')}});
+
+/* ============ LUZ DEL CURSOR ============ */
+const spot=$('#spot');
+addEventListener('pointermove',e=>{spot.style.setProperty('--mx',e.clientX+'px');spot.style.setProperty('--my',e.clientY+'px');spot.classList.add('on')},{passive:true});
+addEventListener('pointerup',e=>{if(e.pointerType=='touch')setTimeout(()=>spot.classList.remove('on'),500)});
+document.documentElement.addEventListener('mouseleave',()=>spot.classList.remove('on'));
+
+/* ============ TEMA Y MENÚ ============ */
+const root=document.documentElement;
+const setTheme=t=>{root.dataset.theme=t;$('#theme').textContent=t=='dark'?'☾':'☀';try{localStorage.setItem('tuc-theme',t)}catch(e){}};
+try{const s=localStorage.getItem('tuc-theme');if(s)setTheme(s)}catch(e){}
+$('#theme').onclick=()=>setTheme(root.dataset.theme=='dark'?'light':'dark');
+$('#burger').onclick=()=>$('#links').classList.toggle('open');
+$$('#links a').forEach(a=>a.onclick=()=>$('#links').classList.remove('open'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$$('#links a').forEach(a=>a.classList.toggle('on',a.hash=='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+$$('section').forEach(s=>io.observe(s));
+addEventListener('scroll',()=>{const h=document.documentElement;$('#sb').style.setProperty('--sp',(scrollY/Math.max(1,h.scrollHeight-innerHeight)).toFixed(4))},{passive:true});
+
+/* ============ PORTADA ============ */
+const K=[["Jugadores",P.length],["División actual",5],["Partidos jugados",R.length],["Objetivo","Élite"]];
+$('#kpis').innerHTML=K.map(x=>`<div><b data-n="${typeof x[1]=='number'?x[1]:''}">${typeof x[1]=='number'?0:x[1]}</b><span>${x[0]}</span></div>`).join('');
+new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting)return;o.disconnect();$$('#kpis b[data-n]:not([data-n=""])').forEach(b=>{const n=+b.dataset.n,t0=performance.now();(function f(t){const p=Math.min(1,(t-t0)/1200);b.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(t0)})}),{threshold:.5}).observe($('#kpis'));
+
+/* ============ JUGADORES ============ */
+const IC={
+brain:'<svg viewBox="0 0 24 24"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 3 3 3 0 0 0 1.5 2.6A3 3 0 0 0 7 17a3 3 0 0 0 5 1V5a2.5 2.5 0 0 0-3-1z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 3 3 3 0 0 1-1.5 2.6A3 3 0 0 1 17 17a3 3 0 0 1-5 1"/><path d="M12 8h-1.5M12 12h-2M12 15h-1"/></svg>',
+heart:'<svg viewBox="0 0 24 24"><path d="M12 20.5S3.5 15.6 3.5 9.6A4.6 4.6 0 0 1 12 7.4a4.6 4.6 0 0 1 8.5 2.2c0 6-8.5 10.9-8.5 10.9z"/></svg>',
+shield:'<svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>',
+mask:'<svg viewBox="0 0 24 24"><path d="M3 7c3-2 6-2 9 0 3-2 6-2 9 0v4c0 4-3 7-9 8-6-1-9-4-9-8z"/><path d="M7 11.5c.8-.8 2-.8 3 0M14 11.5c1-.8 2.2-.8 3 0"/><path d="M9.5 15c1.6 1 3.4 1 5 0"/></svg>',
+star:'<svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.5 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg>',
+wings:'<svg viewBox="0 0 24 24"><path d="M12 12C10 8 6 6 2 6c0 4 1 7 4 9-1.2.2-2.2.2-3.2 0 2 2 5 3 8 2 .5 1.2 1 2.4 1.2 3.5V12z"/><path d="M12 12c2-4 6-6 10-6 0 4-1 7-4 9 1.2.2 2.2.2 3.2 0-2 2-5 3-8 2-.5 1.2-1 2.4-1.2 3.5V12z"/></svg>'};
+const vals=i=>P.map(p=>p[i]).filter(v=>v!=null);
+const mx=[0,0,0,3,4,5].map((_,i)=>Math.max(1,...(i>2?vals(i):[1])));
+let sel=0,sortBy=3;
+$('#pitch').insertAdjacentHTML('beforeend',P.map((p,i)=>`<button class="dot" style="left:${p[6]}%;top:${p[7]}%;--i:${i}" data-i="${i}" aria-label="${p[0]}"><img class="ph" src="${PH[p[8]]}" alt=""><i class="bi">${IC[p[11]]}</i><em>${p[2]}</em><small>${p[10]}</small></button>`).join('')+FREE.map((f,i)=>`<button class="dot free" style="left:${f[2]}%;top:${f[3]}%;--i:${P.length+i}" data-f="${i}" aria-label="Puesto libre: ${f[1]}"><img src="${CREST}" alt=""><small>${f[0]}</small></button>`).join(''));
+$('#bench').innerHTML=BENCH.map((b,i)=>`<button class="bn" data-b="${i}" aria-label="Banquillo: ${b[1]}"><img src="${CREST}" alt=""><small>${b[0]}</small></button>`).join('');
+const show=v=>v==null?'—':v;
+function card(){$$('.dot,.bn').forEach(d=>d.classList.remove('on'));
+if(typeof sel=='string'){const isB=sel[0]=='b',n=+sel.slice(1),f=isB?BENCH[n]:FREE[n];
+(isB?$$('.bn')[n]:$$('.dot.free')[n]).classList.add('on');
+$('#pcard').innerHTML=`<div class="pic free"><img src="${CREST}" alt=""></div><span class="pos">${f[0]} · ${isB?'Banquillo':'Puesto libre'}</span><h3>${f[1]}</h3><p class="n2">${isB?'Plaza de suplente libre: entras en la rotación del equipo.':'Este puesto está libre en la plantilla. ¿Es el tuyo?'}</p><div class="cta"><button class="btn p" id="want">Quiero apuntarme</button></div>`;
+$('#want').onclick=()=>{$('#fmsg').value=`Me interesa ${isB?'una plaza de suplente':'el puesto'} de ${f[1].toLowerCase()}.`;location.hash='contacto'};return}
+const p=P[sel];$$('.dot:not(.free)')[sel].classList.add('on');
+const row=(l,i,c)=>`<div class="${c||''}"><span>${l}</span><span class="bar"><i style="width:${(p[i]||0)/mx[i]*100}%"></i></span><b>${show(p[i])}</b></div>`;
+$('#pcard').innerHTML=`<div class="pf"><img src="${PH[p[8]]}" alt="${p[0]}"><span class="pic">${IC[p[11]]}</span></div><span class="pos">${p[1]} · Dorsal ${p[2]}</span><h3>${p[0]}</h3>${p[9]?`<p class="nk">${p[9]}</p>`:''}<div class="st">${row('Goles',3)}${row('Asistencias',4)}${row('MVPs',5,'g')}</div>${vals(3).length+vals(4).length+vals(5).length?'':'<p class="n2">Estadísticas pendientes: la temporada acaba de empezar.</p>'}<button class="btn" data-k="${p[8]}" style="margin-top:16px">▶ Ver presentación</button>`}
+$('#pitch').onclick=e=>{const d=e.target.closest('.dot');if(!d)return;sel=d.dataset.f!=null?'f'+d.dataset.f:+d.dataset.i;card()};
+$('#bench').onclick=e=>{const b=e.target.closest('.bn');if(b){sel='b'+b.dataset.b;card()}};
+const labels={3:'Goles',4:'Asistencias',5:'MVPs'};
+$('#tabs').innerHTML=Object.keys(labels).map(i=>`<button data-s="${i}">Ranking de ${labels[i].toLowerCase()}</button>`).join('');
+function rank(){$$('#tabs button').forEach(b=>b.classList.toggle('on',+b.dataset.s==sortBy));
+$('#rnote').textContent=vals(sortBy).length?'':'Los rankings se activan tras el primer partido de la temporada.';
+$('#rank').innerHTML=P.map((p,i)=>[p,i]).sort((a,b)=>(b[0][sortBy]??-1)-(a[0][sortBy]??-1)).map(([p,i],n)=>`<button data-i="${i}"><b>${n+1}</b><span>${p[0]} <small style="color:var(--mut)">${p[1]}</small></span><span class="bar"><i style="width:${(p[sortBy]||0)/mx[sortBy]*100}%;${sortBy==5?'background:var(--hi)':''}"></i></span><em>${show(p[sortBy])}</em></button>`).join('')}
+$('#tabs').onclick=e=>{const b=e.target.closest('button');if(b){sortBy=+b.dataset.s;rank()}};
+$('#rank').onclick=e=>{const b=e.target.closest('button');if(b){sel=+b.dataset.i;card();$('#pitch').scrollIntoView({block:'center'})}};
+card();rank();
+
+/* ============ HISTORIA ============ */
+$('#tl').innerHTML=Y.map(a=>`<button class="yr" data-y="${a.y}" style="--k:${Y.indexOf(a)}"><h3>${a.y}</h3><div class="rail"><i></i></div><strong>${a.t}</strong><p>${a.s}</p><u>${a.cur?"Actualidad ●":"Entrar en "+a.y}</u></button>`).join('');
+$('#tl').onclick=e=>{const b=e.target.closest('.yr');if(b)location.hash='historia-'+b.dataset.y};
+function route(){const m=location.hash.match(/^#historia-(\d{4})$/),d=$('#det');
+if(!m){d.classList.remove('open');d.setAttribute('aria-hidden','true');document.body.style.overflow='';return}
+const i=Y.findIndex(a=>a.y==m[1]);if(i<0)return;const a=Y[i];
+$('#dc').innerHTML=`<div class="dh"><h2>${a.y}</h2><h3>${a.t}</h3><p>${a.tx}</p><div class="form" style="margin-top:24px;flex-wrap:wrap;height:auto">${a.st.map(s=>`<span class="tag">${s}</span>`).join('')}</div></div>`+(a.k.length?`<div class="gl">Clips</div><div class="gal">${a.k.map(k=>vtile(k,/^gol/.test(k)?'h':'')).join('')}</div>`:'')+(a.k.length?'':`<div class="dh" style="padding-top:10px"><a class="btn p" href="#historia-2027">Ver los clips de la temporada actual</a></div>`);
+$('#prev').style.visibility=i?'visible':'hidden';$('#next').style.visibility=i<Y.length-1?'visible':'hidden';
+$('#prev').onclick=()=>location.hash='historia-'+Y[i-1].y;$('#next').onclick=()=>location.hash='historia-'+Y[i+1].y;
+d.classList.add('open');d.setAttribute('aria-hidden','false');d.scrollTop=0;document.body.style.overflow='hidden'}
+$('#back').onclick=()=>{location.hash='historia'};
+addEventListener('hashchange',route);route();
+
+/* ============ RESULTADOS ============ */
+let rf='T';
+const pad=n=>Array.from({length:Math.max(0,5-n)});
+$('#form').innerHTML=R.slice(0,5).map(r=>`<i class="${r[0]}" title="${r[1]}"></i>`).join('')+pad(R.length).map(()=>'<i></i>').join('');
+function res(){
+if(!R.length){$('#res').innerHTML=Array.from({length:5},(_,i)=>`<div class="m empty"><span class="w">–</span><span>Partido por confirmar<small>Jornada ${i+1} · Rival por definir</small></span><span class="sc">– : –</span></div>`).join('');return}
+$('#rtabs').hidden=false;$('#rtabs').innerHTML=[['T','Todos'],['W','Victorias'],['E','Empates'],['L','Derrotas']].map(t=>`<button data-f="${t[0]}" class="${t[0]==rf?'on':''}">${t[1]}</button>`).join('');
+$('#res').innerHTML=R.filter(r=>rf=='T'||r[0]==rf).map(r=>`<div class="m"><span class="w ${r[0]}">${r[0]=='W'?'V':r[0]=='L'?'D':'E'}</span><span>Tucanes de Yucatán vs ${r[1]}<small>${r[2]} · MVP: ${r[5]}</small></span><span class="sc">${r[3]}-${r[4]}</span></div>`).join('')}
+$('#rtabs').onclick=e=>{const b=e.target.closest('button');if(b){rf=b.dataset.f;res()}};res();
+
+/* ============ MULTIMEDIA ============ */
+$('#mg').innerHTML=['gol1','gol2'].map(k=>vtile(k,'h')).join('');
+$('#mp').innerHTML=P.map(p=>vtile(p[8])).join('');
+$('#mm').innerHTML=['trailer','nacho','fiesta1','fiesta2','fiesta3','fiesta4'].map(k=>vtile(k)).join('');
+
+/* ============ SPONSORS, REDES, CONTACTO ============ */
+$('#sp').innerHTML=SP.map(s=>`<a href="${s[1]}" target="_blank" rel="noopener sponsored">${s[0]}<small>Patrocinador</small></a>`).join('')+`<a class="o" href="mailto:${MAIL}?subject=Patrocinio">Tu marca aquí<small>Escríbenos</small></a>`;
+$('#so').innerHTML=SO.map(s=>`<a href="${s[2]}" ${/^http/.test(s[2])?'target="_blank" rel="noopener"':''}><span>${s[0]}<br><small>${s[1]}</small></span><span aria-hidden="true">↗</span></a>`).join('');
+$('#cp').onclick=()=>{try{navigator.clipboard.writeText(MAIL).then(()=>toast('Correo copiado'),()=>toast(MAIL))}catch(e){toast(MAIL)}};
+$('#fm').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);const body=`Nombre: ${f.get('n')}\nID de EA / gamertag: ${f.get('g')}\n\n${f.get('m')||''}`;location.href=`mailto:${MAIL}?subject=${encodeURIComponent('Quiero jugar con los Tucanes – '+f.get('n'))}&body=${encodeURIComponent(body)}`;toast('Abriendo tu correo…')};
+
+/* ============ ANIMACIONES ============ */
+const rio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rio.unobserve(e.target);if(e.target.id=='tl')setTimeout(()=>e.target.classList.add('done'),2400)}}),{threshold:.12});
+const rv=(sel,step)=>$$(sel).forEach((e,i)=>{e.classList.add('rv');e.style.transitionDelay=(i%10)*(step||70)+'ms';rio.observe(e)});
+rv('section h2');rv('section .sub');rv('.tk');rv('#mg .tile,#mp .tile,#mm .tile,#mf-none');rv('.sp a');rv('.so a');rv('.m');rv('.rec');rv('.fm');rv('.cw .mail');rv('.kpis div');rv('.bn');
+$$('.pitch,.tl').forEach(e=>rio.observe(e));
+$$('.hero h1').forEach(h=>{let n=0;const split=node=>[...node.childNodes].forEach(c=>{if(c.nodeType==3){const f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(w=>{if(!w)return;if(/^\s+$/.test(w)){f.append(' ');return}const sp=document.createElement('span');sp.className='w';[...w].forEach(ch=>{const b=document.createElement('b');b.className='lt';b.textContent=ch;b.style.setProperty('--n',n++);sp.append(b)});f.append(sp)});c.replaceWith(f)}else split(c)});split(h)});
+document.addEventListener('pointermove',e=>{if(e.pointerType=='touch'||!e.target.closest)return;const t=e.target.closest('.tile,.sp a,.so a');if(!t)return;const r=t.getBoundingClientRect();t.style.setProperty('--rx',(-((e.clientY-r.top)/r.height-.5)*10).toFixed(2)+'deg');t.style.setProperty('--ry',(((e.clientX-r.left)/r.width-.5)*12).toFixed(2)+'deg')},{passive:true});
+document.addEventListener('pointerout',e=>{const t=e.target.closest&&e.target.closest('.tile,.sp a,.so a');if(t){t.style.removeProperty('--rx');t.style.removeProperty('--ry')}});
+</script>
 </body>
 </html>

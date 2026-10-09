@@ -1,0 +1,6 @@
+TUCANES DE YUCATÁN · WEB
+1) Sube TODO el contenido de esta carpeta a un repositorio de GitHub (index.html, carpeta media, robots.txt, sitemap.xml).
+2) Activa GitHub Pages (Settings > Pages > Deploy from a branch > main > /root).
+3) Cuando tengas tu dirección final, abre index.html, robots.txt y sitemap.xml y sustituye
+   https://TUUSUARIO.github.io/tucanes-de-yucatan/   por tu dirección real (Buscar y reemplazar).
+4) Edita los datos (jugadores, resultados, enlaces) en el bloque "DATOS" de index.html.
